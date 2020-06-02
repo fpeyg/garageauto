@@ -2,13 +2,10 @@ package com.a84.garageauto.fenetre;
 
 import com.a84.garageauto.m.Utilisateur;
 import com.a84.garageauto.m.UtilisateurDAO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,19 +15,19 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class Deuxieme extends JPanel {
+public class Authentification extends JPanel {
 
     private JFrame parent;
 
-    public Deuxieme() {
+    public Authentification() {
     }
 
-    public Deuxieme(JFrame parent) {
+    public Authentification(JFrame parent) {
 
         this.parent = parent;
 
         // info bulle panel
-        this.setToolTipText("Contenu panel deuxième fenêtre ");
+        this.setToolTipText("Contenu panel authentification fenêtre ");
 
         // Creating JLabel
         JLabel userLabel = new JLabel("User");
@@ -225,7 +222,7 @@ public class Deuxieme extends JPanel {
 
     public void Affichemenu(JFrame parent) {
 
-        Troisieme actions = new Troisieme(parent);
+        Menu actions = new Menu(parent);
         parent.setContentPane(actions);
         parent.getContentPane().setBackground(Color.orange);
         parent.setVisible(true);

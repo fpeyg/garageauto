@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class Troisieme extends JPanel {
+public class Menu extends JPanel {
 
     private JFrame parent;
 
@@ -17,13 +17,13 @@ public class Troisieme extends JPanel {
     private JButton document = new JButton("Les documents");
 
 
-    public Troisieme(JFrame parent) {
+    public Menu(JFrame parent) {
 
         this.parent = parent;
         System.out.println("contenu frame  " + parent.getContentPane());
 
         // info bulle panel
-        this.setToolTipText("Contenu panel troisième fenêtre");
+        this.setToolTipText("Contenu panel menu fenêtre");
 
         // layout de base est BorderLayout
         this.setLayout(new BorderLayout());

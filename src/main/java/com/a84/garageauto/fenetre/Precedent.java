@@ -24,7 +24,7 @@ public class Precedent extends AbstractAction {
 
         if (sonnom.compareTo("Troisieme") == 0) {
             this.fenetre.getContentPane().setVisible(false);
-            Deuxieme panprecedent = new Deuxieme(this.fenetre);
+            Authentification panprecedent = new Authentification(this.fenetre);
             this.fenetre.setContentPane(panprecedent);
             this.fenetre.getContentPane().setVisible(true);
         } else {
@@ -32,7 +32,7 @@ public class Precedent extends AbstractAction {
                 System.out.println("on est déja à la deuxième");
             } else {
                 this.fenetre.getContentPane().setVisible(false);
-                Deuxieme panprecedent = new Deuxieme(this.fenetre);
+                Authentification panprecedent = new Authentification(this.fenetre);
                 this.fenetre.setContentPane(panprecedent);
                 this.fenetre.getContentPane().setVisible(true);
             }

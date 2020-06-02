@@ -4,12 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class Premiere extends JFrame {
+public class Debut extends JFrame {
 
     private JMenuBar menubarre = new JMenuBar();
     private JPanel pan1 = new JPanel(new BorderLayout()); // panel
 
-    public Premiere() {
+    public Debut() {
 
         this.setTitle("Suivi des véhicules vendus");
         this.setSize(800,600);
@@ -54,8 +54,8 @@ public class Premiere extends JFrame {
         this.pan1.setLayout(new OverlayLayout(this.pan1));
 
         //on y ajoute les autres JPanel
-        this.pan1.add(new Deuxieme(this));
-        this.pan1.add(new Troisieme(this));
+        this.pan1.add(new Authentification(this));
+        this.pan1.add(new Menu(this));
 
         // rendre la Frame visible
         this.setVisible(true);

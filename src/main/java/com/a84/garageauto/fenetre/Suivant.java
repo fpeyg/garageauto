@@ -23,7 +23,7 @@ public class Suivant extends AbstractAction {
 
         if (sonnom.compareTo("Deuxieme") == 0) {
             this.fenetre.getContentPane().setVisible(false);
-            Troisieme pansuivant = new Troisieme(this.fenetre);
+            Menu pansuivant = new Menu(this.fenetre);
             this.fenetre.setContentPane(pansuivant);
             this.fenetre.getContentPane().setVisible(true);
         } else {
@@ -31,7 +31,7 @@ public class Suivant extends AbstractAction {
                 System.out.println("ne rien faire !!");
             } else {
                 this.fenetre.getContentPane().setVisible(false);
-                Deuxieme pansuivant = new Deuxieme(this.fenetre);
+                Authentification pansuivant = new Authentification(this.fenetre);
                 this.fenetre.setContentPane(pansuivant);
                 this.fenetre.getContentPane().setVisible(true);
             }

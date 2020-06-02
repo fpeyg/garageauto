@@ -1,9 +1,6 @@
 package com.a84.garageauto;
 
-import com.a84.garageauto.fenetre.Premiere;
-import com.a84.garageauto.m.Utilisateur;
-import com.a84.garageauto.m.UtilisateurDAO;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.a84.garageauto.fenetre.Debut;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -18,7 +15,7 @@ public class GarageautoApplication {
 		SpringApplication.run(GarageautoApplication.class, args);
 
 		EventQueue.invokeLater(() -> {
-			Premiere fenetre = new Premiere();
+			Debut fenetre = new Debut();
 			fenetre.setVisible(true);
 		});
 	}

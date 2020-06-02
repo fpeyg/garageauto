@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
+import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +17,9 @@ import java.util.List;
 import java.util.Optional;
 
 public class Lesutilisateurs extends JPanel {
+
+//    @Autowired
+//    UtilisateurDAO utilisateurDAO;
 
     public Lesutilisateurs() {
 
@@ -76,16 +80,23 @@ public class Lesutilisateurs extends JPanel {
         nouveauBouton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("vous avez cliqué sur le bouton nouvel utilisateur");
+                System.out.println("vous avez cliqué sur le bouton nouvel utilisateur " + nomText.getText());
                 AjoutUtilisateur(nomText.getText());
             }
         });
 
     }
 
+
+
+
+
     public void AjoutUtilisateur (String nom) {
 
-        UtilisateurDAO us = new UtilisateurDAO() {
+
+
+        UtilisateurDAO udao = new UtilisateurDAO()
+        {
             @Override
             public boolean existsByNom(String nom) {
                 return false;
@@ -217,8 +228,12 @@ public class Lesutilisateurs extends JPanel {
             }
         };
 
-        boolean found = us.existsByNom(nom);
-        System.out.println("utilisateur found " + found);
+
+        System.out.println("utilisateur " + nom);
+
+        boolean found = udao.existsByNom(nom);
+        System.out.println("utilisateur found " + nom);
+
         if (found) {
             System.out.println("utilisateur existe");
         } else {
@@ -228,7 +243,7 @@ public class Lesutilisateurs extends JPanel {
             u.setMotdepasse("billy");
             u.setFonction("the kid");
             u.setGrade(0);
-            us.save(u);
+            udao.save(u);
             System.out.println("utilisateur ajouté ??");
         }
     }
