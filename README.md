@@ -2,7 +2,7 @@ suite à mot de passe erroné , suppression repository puis nouvelle création d
 
 creation de la base de donnée "garage" sous MySQL
 
-Dans le package 'm' création de la cLase Utilisateur 
+Dans le package 'm' création de la classe Utilisateur 
 
 applications.properties avec
   spring.jpa.hibernate.ddl-auto=create
